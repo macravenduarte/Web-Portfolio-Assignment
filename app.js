@@ -6,11 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 //require MONGOOSE
-var mongoose = require('mongoose');
+    var mongoose = require('mongoose');
 
 //CONTROLLERS
-var routes = require('./routes/index');
-var aboutMe = require('./routes/aboutMe');
+//home page
+    var routes = require('./routes/index');
+//other custom pages
+    var aboutMe = require('./routes/aboutMe');
+    var contact = require('./routes/contacts');
 
 var app = express();
 
@@ -26,11 +29,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/aboutMe', aboutMe);
+//USE the pages you've created
+    app.use('/', routes);
+    app.use('/aboutMe', aboutMe);
+    app.use('/contacts', contact);
 
 //connect LOCALLY with mongoose
-mongoose.connect('mongodb://localhost/test');
+    mongoose.connect('mongodb://localhost/test');
 
 //check DB connection
 var db = mongoose.connection;
