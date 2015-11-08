@@ -1,14 +1,21 @@
 <!--
-    This page will render the SERVICES page of the web portfolio site. It will include a navigation header and footer, and possibly some pictures that represent the languages. 
+    This page will render the SERVICES page of the web portfolio site. It will include a navigation header and footer,
+     and possibly some pictures that represent the languages.
 -->
 
 <%- include ../partials/header.ejs %>
 
-<main class="container">
+<div id="services" class="container-fluid">
+
+<!--Jumbotron page header div class.
+    Source: http://www.w3schools.com/bootstrap/bootstrap_case_jumbotron.asp-->
+    <div class="page-header">
+        <h1><%= title %></h1>
+    </div>
+
+    <p>Able to work in an assortment of different languages.</p>
+
     
-    <h1><% title %></h1>
-    <p>Enter some of the languages that you are of service for</p>
-    
-</main>
+</div>
 
 <%- include ../partials/footer.ejs %>

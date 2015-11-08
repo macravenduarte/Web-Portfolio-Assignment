@@ -1,14 +1,28 @@
 <!--
-    This page will render the PROJECTS section of the portfolio site. It will include a navigation header and footer, and a link to my github for completed works and participated projects.
+    This page will render the PROJECTS section of the portfolio site. It will include a navigation header and footer,
+    and a link to my github for completed works and participated projects.
 -->
 
 <%- include ../partials/header.ejs %>
 
-<main class="container">
-   
-    <h1><%= title %></h1>
-    <p>Add a link to your projects</p>
-    
-</main>
+<div id="projects" class="container-fluid">
+
+<!--Jumbotron page header div class.
+    Source: http://www.w3schools.com/bootstrap/bootstrap_case_jumbotron.asp-->
+    <div class="page-header">
+        <h1><%= title %></h1>
+    </div>
+
+    <div>
+        <p>Check out some of my school projects I've completed in my
+            <a href="http://github.com/macravenduarte/">
+                <img src="images/Github/GitHub-Logos/GitHub_Logo.png"
+                     title="Marco's Github"
+                     width="100" length="100"/>
+            </a>
+        </p>
+    </div>
+
+</div>
 
 <%- include ../partials/footer.ejs %>

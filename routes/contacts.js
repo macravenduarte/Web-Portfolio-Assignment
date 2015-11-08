@@ -10,7 +10,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
    //render the contact me index page with a title
     res.render('contacts/index', {
-       title: 'Contact Me' 
+        title: 'Contact Me'
+
     });
 });
 

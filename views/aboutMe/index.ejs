@@ -3,11 +3,18 @@
 -->
 <%- include ../partials/header.ejs %>
 
-<main class="container">
-   
-    <h1><%= title %></h1>
-    <p>shamelessly self promote yourself here</p>
-    
-</main>
+<div id="aboutMe" class="container-fluid">
+
+<!--Jumbotron page header div class.
+    Source: http://www.w3schools.com/bootstrap/bootstrap_case_jumbotron.asp-->
+    <div class="page-header">
+        <h1><%= title %></h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <p>I am a junior computer programmer with lots to offer almost any project!</p>
+        </div>
+    </div>
+</div>
 
 <%- include ../partials/footer.ejs %>

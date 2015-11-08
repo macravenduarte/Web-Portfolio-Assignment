@@ -1,14 +1,47 @@
 <!-- 
-    This page will render the CONTACT ME section from the contacts folder of the web portfolio site. It will include a navigation header and footer a form that will allow a user to send me an email. For confirmation purposes there is also a captcha box to avoid spamming
+    This page will render the CONTACT ME section from the contacts folder of the web portfolio site.
+    It will include a navigation header and footer a form that will allow a user to send me an email.
+    For confirmation purposes there is also a captcha box to avoid spamming
 -->
 
 <%- include ../partials/header.ejs %>
 
-<main class="container">
-   
-    <h1><%= title %></h1>
-    <p>Add a way for someone to contact you with a captcha confirmation</p>
-    
-</main>
+<div id="contacts" class="container-fluid">
+
+    <!--page header div class via bootstrap -->
+    <div class="page-header">
+        <h1><%= title %></h1>
+    </div>
+
+<!-- have a link to your github repo -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <p>Check Out My GitHub Repo!</p>
+            </div>
+            <div class="col-sm-3">
+                <a href="http://github.com/macravenduarte/">
+                    <img src="images/Github/Octocat.png"
+                         title="Link To Marco's Github Repository"
+                         width="75" length="75"/>
+                </a>
+            </div>
+
+<!--Include a a one line form to take in a user email to the db.
+    Add a envelope glyph icon to the button
+    Source: http://www.w3schools.com/bootstrap/bootstrap_glyphicons.asp
+-->
+            <div class="col-sm-2">
+                <p>Connect With Me Via Email!</p>
+            </div>
+            <div class="col-sm-4">
+                <form class="form-inline">
+                    <input type="email" class="form-control" size="40" placeholder="Email Address">
+                    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-envelope"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%- include ../partials/footer.ejs %>
