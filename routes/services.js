@@ -1,4 +1,4 @@
-//This ROUTES file will direct to the Home page, including a title
+//This ROUTES file will direct to the Services page, including a title
 
 //link to express
 var express = require('express');
@@ -6,11 +6,11 @@ var express = require('express');
 //create a router object for routing
 var router = express.Router();
 
-//GET - home page
+//GET - show the services page
 router.get('/', function(req, res, next) {
-    //render the main index page with a title
-    res.render('index', { 
-        title: 'Web Portfolio' 
+   //render the about me view page with a title
+    res.render('services/index', {
+       title: 'Services' 
     });
 });
 

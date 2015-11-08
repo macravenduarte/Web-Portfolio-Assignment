@@ -1,3 +1,4 @@
+//require the NODE MODULES
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -8,12 +9,14 @@ var bodyParser = require('body-parser');
 //require MONGOOSE
     var mongoose = require('mongoose');
 
-//CONTROLLERS
+//require CONTROLLERS
 //home page
     var routes = require('./routes/index');
-//other custom pages
+//other pages
     var aboutMe = require('./routes/aboutMe');
-    var contact = require('./routes/contacts');
+    var contacts = require('./routes/contacts');
+    var projects = require('./routes/projects');
+    var services = require('./routes/services');
 
 var app = express();
 
@@ -32,11 +35,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 //USE the pages you've created
     app.use('/', routes);
     app.use('/aboutMe', aboutMe);
-    app.use('/contacts', contact);
+    app.use('/contacts', contacts);
+    app.use('/projects', projects);
+    app.use('/services', services);
 
-//connect LOCALLY with mongoose
-    mongoose.connect('mongodb://localhost/test');
+//Connect LOCALLY with mongoose
+    //mongoose.connect('mongodb://localhost/test');
 
+//Connect LIVE
+mongoose.connect('mongodb://<dbusername>:<dbPaassword>@ds048368.mongolab.com:48368/comp-2068');
+                     
 //check DB connection
 var db = mongoose.connection;
     
