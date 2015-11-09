@@ -40,10 +40,12 @@ app.use(express.static(path.join(__dirname, 'public')));
     app.use('/services', services);
 
 //Connect LOCALLY with mongoose
-    //mongoose.connect('mongodb://localhost/test');
+//mongoose.connect('mongodb://localhost/test');
 
 //Connect LIVE
-mongoose.connect('mongodb://<dbusername>:<dbPaassword>@ds048368.mongolab.com:48368/comp-2068');
+//mongoose.connect('mongodb://<username>:<password>@ds048368.mongolab.com:48368/comp-2068');
+
+mongoose.connect('ftp://waws-prod-cq1-003.ftp.azurewebsites.windows.net');
                      
 //check DB connection
 var db = mongoose.connection;
