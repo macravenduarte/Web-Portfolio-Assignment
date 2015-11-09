@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Connect LIVE
 //mongoose.connect('mongodb://<username>:<password>@ds048368.mongolab.com:48368/comp-2068');
 
-mongoose.connect('ftp://waws-prod-cq1-003.ftp.azurewebsites.windows.net');
+//mongoose.connect('ftp://waws-prod-cq1-003.ftp.azurewebsites.windows.net');
                      
 //check DB connection
 var db = mongoose.connection;
