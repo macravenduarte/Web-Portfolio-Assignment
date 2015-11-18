@@ -6,17 +6,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//require MONGOOSE
-    var mongoose = require('mongoose');
+//additions usd for AUTHENTICATION
+var mongoose = require('mongoose');
+var flash = require('connect-flash');
+var passport = require('passport');
+var session = require('express-session');
 
 //require CONTROLLERS
 //home page
-    var routes = require('./routes/index');
+var routes = require('./routes/index');
 //other pages
-    var aboutMe = require('./routes/aboutMe');
-    var contacts = require('./routes/contacts');
-    var projects = require('./routes/projects');
-    var services = require('./routes/services');
+var aboutMe = require('./routes/aboutMe');
+var contacts = require('./routes/contacts');
+var projects = require('./routes/projects');
+var services = require('./routes/services');
 
 var app = express();
 
@@ -32,20 +35,31 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Session setup
+app.use(session({
+    secret: 'someSecret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+//part of passport configuration
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
 //USE the pages you've created
-    app.use('/', routes);
-    app.use('/aboutMe', aboutMe);
-    app.use('/contacts', contacts);
-    app.use('/projects', projects);
-    app.use('/services', services);
+app.use('/', routes);
+app.use('/aboutMe', aboutMe);
+app.use('/contacts', contacts);
+app.use('/projects', projects);
+app.use('/services', services);
+app.use('/users', users);
 
 //Connect LOCALLY with mongoose
-//mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test');
 
 //Connect LIVE
 //mongoose.connect('mongodb://<username>:<password>@ds048368.mongolab.com:48368/comp-2068');
-
-//mongoose.connect('ftp://waws-prod-cq1-003.ftp.azurewebsites.windows.net');
                      
 //check DB connection
 var db = mongoose.connection;
