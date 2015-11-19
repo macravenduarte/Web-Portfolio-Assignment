@@ -20,6 +20,7 @@ var aboutMe = require('./routes/aboutMe');
 var contacts = require('./routes/contacts');
 var projects = require('./routes/projects');
 var services = require('./routes/services');
+var users = require('./routes/users');
 
 var app = express();
 

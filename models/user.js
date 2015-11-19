@@ -6,20 +6,22 @@ var bcrypt = require('bcrypt-nodejs');
 var Schema = mongoos.Schema;
 
 //define user schema
-var UserSchema = new Schema({
-                            username: String,
-                            password: String,
-                            email: String,
-                            displayName: String,
-                            salt: String,
-                            provider: String,
-                            providerId: String,
-                            providerData: {},
-                            created: Number,
-                            updated: Number
-                        },{
-                            collection: 'userInfo'
-                        });
+var UserSchema =
+    new Schema({
+                username: String,
+                password: String,
+                email: String,
+                displayName: String,
+                salt: String,
+                provider: String,
+                providerId: String,
+                providerData: {},
+                created: Number,
+                updated: Number
+            },{
+                collection: 'userInfo'
+            });
+
 //Generated a Hash
 UserSchema.methods.generateHash = function(password) {
     //return a salted password
@@ -31,4 +33,5 @@ UserSchema.methods.validPassword = function(password) {
     //compare the schema password and the hashed password
     return bcrypt.compareSync(password, this.password);
 };
+
 module.exports = mongoose.model('User', UserSchema);

@@ -7,10 +7,11 @@ var express = require('express');
 var router = express.Router();
 
 // GET - Users page 
-router.get('/users', function(req, res, next) {
+router.get('/', function(req, res, next) {
     //render the about me index page with a title
-    res.render('index', { 
-        title: 'Users' 
+    res.render('login', {
+        title: 'User Login'
+    });
 });
 
     //make this public
