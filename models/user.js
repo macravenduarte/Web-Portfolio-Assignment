@@ -12,12 +12,7 @@ var UserSchema =
                 password: String,
                 email: String,
                 displayName: String,
-                salt: String,
-                provider: String,
-                providerId: String,
-                providerData: {},
-                created: Number,
-                updated: Number
+                salt: String
             },{
                 collection: 'userInfo'
             });

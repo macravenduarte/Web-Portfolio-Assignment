@@ -9,7 +9,7 @@ var router = express.Router();
 // GET - Users page 
 router.get('/', function(req, res, next) {
     //render the about me index page with a title
-    res.render('login', {
+    res.render('users/login', {
         title: 'User Login'
     });
 });
