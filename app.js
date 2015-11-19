@@ -46,9 +46,9 @@ app.use(session({
 }));
 
 //part of passport configuration
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
 
 //USE the pages you've created
 app.use('/', routes);
