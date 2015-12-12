@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     //mongoose.connect('mongodb://localhost/test');
 
 //Connect LIVE
-mongoose.connect('mongodb://<dbusername>:<dbPaassword>@ds048368.mongolab.com:48368/comp-2068');
+mongoose.connect('mongodb://duarte.marco:Raven$M0ngo@ds048368.mongolab.com:48368/comp-2068');
                      
 //check DB connection
 var db = mongoose.connection;
