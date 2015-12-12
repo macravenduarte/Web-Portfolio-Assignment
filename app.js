@@ -6,16 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 //require MONGOOSE
-    var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 //require CONTROLLERS
 //home page
-    var routes = require('./routes/index');
+var routes = require('./routes/index');
 //other pages
-    var aboutMe = require('./routes/aboutMe');
-    var contacts = require('./routes/contacts');
-    var projects = require('./routes/projects');
-    var services = require('./routes/services');
+var aboutMe = require('./routes/aboutMe');
+var contacts = require('./routes/contacts');
+var projects = require('./routes/projects');
+var services = require('./routes/services');
 
 var app = express();
 
@@ -30,11 +30,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //USE the pages you've created
-    app.use('/', routes);
-    app.use('/aboutMe', aboutMe);
-    app.use('/contacts', contacts);
-    app.use('/projects', projects);
-    app.use('/services', services);
+app.use('/', routes);
+app.use('/aboutMe', aboutMe);
+app.use('/contacts', contacts);
+app.use('/projects', projects);
+app.use('/services', services);
 
 //Connect LOCALLY with mongoose
     //mongoose.connect('mongodb://localhost/test');
