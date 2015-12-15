@@ -1,12 +1,14 @@
 //This ROUTES file will direct to the Users page, including a title
 
+//link to express and passport
 var express = require('express');
 var passport = require('passport');
+
 var router = express.Router();
 
 var User = require('../models/user');
 
-/* Utility functin to check if user is authenticatd */
+/* Utility function to check if user is authenticated */
 function requireAuth(req, res, next){
 
     // check if the user is logged in

@@ -2,17 +2,14 @@
 html {
     background-color: transparent;
 }
+
 body {
-    padding-left: 20px;
-    padding-right: 20px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: transparent;
 }
 
 main {
-    top: 80px;
     background-color: #698EFF; /* Light Blue*/
-    margin-bottom: auto;
 }
 
 .navbar {

@@ -1,5 +1,5 @@
 module.exports = {
-    'url': 'mongodb://localhost/test'
+    'url': 'mongodb://dbuser:dbuser@ds048368.mongolab.com:48368/comp-2068'
 };
 //Connect LOCALLY with mongoose
 //mongodb://localhost/test
