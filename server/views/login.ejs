@@ -1,5 +1,5 @@
 <% include partials/header.ejs %>
-<main class="container">
+<article class="container">
     <% if (messages.length > 0) { %>
     <div class="alert alert-danger"><%= messages %></div>
     <% } %>
@@ -20,6 +20,6 @@
             </fieldset>
         </form>
     </div>
-</main>
+</article>
 <% include partials/boot.ejs %>
 <% include partials/footer.ejs %>

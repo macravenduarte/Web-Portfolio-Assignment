@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 //require MONGOOSE, SESSION, FLASH and PASSPORT
 var mongoose = require('mongoose');
 var session = require('express-session');
-var flash = require ('connect-flash');
+var flash = require('connect-flash');
 var passport = require('passport');
 
 //check DB connection
@@ -35,7 +35,7 @@ var app = express();
 require('./server/config/passport')(passport);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './server/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));

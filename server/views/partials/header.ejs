@@ -17,11 +17,11 @@
               href='/images/favicon.ico' />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet"
-              href="/lib/bootstrap/dist/css/bootstrap.min.css">
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
         <!-- Optional theme -->
         <link rel="stylesheet"
-              href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
         <!-- Latest   jQuery -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -31,6 +31,7 @@
     </head>
 
     <body>
+    <main>
         <header>
     <!-- Inverse the nav bar color and set it fixed to the top.
          Source: http://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
@@ -38,42 +39,48 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
+                           <!--Home Link-->
                             <% if(title == "Home" ) { %>
                             <li class="active">
-                                <% } else { %>
+                            <% } else { %>
                             <li>
-                                <% } %>
+                            <% } %>
                             <a href="/">Home Page</a></li>
                             <li role="separator" class="divider"></li>
+
+                            <!--Users with Display Name-->
                             <% if (displayName) { %>
-                            <% if(title == "Users" ) { %>
-                            <li class="active">
+                                <% if(title == "Users" ) { %>
+                                <li class="active">
                                 <% } else { %>
-                            <li>
+                                <li>
                                 <% } %>
-                                <a href="/users">Users</a></li>
-                            <li class="navbar-text">Hello,
-                                <%= displayName %>
-                            </li>
-                            <li><a href="/logout">Logout</a></li>
+                                    <a href="/users">Users</a></li>
+                                <li class="navbar-text">Hello,
+                                    <%= displayName %>
+                                </li>
+                                <!--Logout-->
+                                <li><a href="/logout">Logout</a></li>
                             <% } else { %>
-                            <% if(title == "Register" ) { %>
-                            <li class="active">
+                                <% if(title == "Register" ) { %>
+                                <li class="active">
+                                    <% } else { %>
+                                <li>
+                                    <% } %>
+                                    <a href="/register">Register</a></li>
+                                <% if(title == "Login" ) { %>
+                                <li class="active">
                                 <% } else { %>
-                            <li>
+                                <li>
                                 <% } %>
-                                <a href="/register">Register</a></li>
-                            <% if(title == "Login" ) { %>
-                            <li class="active">
-                                <% } else { %>
-                            <li>
-                                <% } %>
-                                <a href="/login">Login</a></li>
                             <% } %>
-                            <li><a href="aboutMe">About Me</a></li>
+                                    <a href="/login">Login</a></li>
+
+                            <li class="active"><a href="aboutMe">About Me</a></li>
                             <li><a href="/services">Services</a></li>
                             <li><a href="/projects">Projects</a></li>
                             <li><a href="/contacts">Contact Me</a></li>
+
                         </ul>
                     </div>
                 </div>
