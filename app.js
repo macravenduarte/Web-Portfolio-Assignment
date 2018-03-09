@@ -17,7 +17,7 @@ mongoose.connect(db.url); //Rename connection string for easier scripting
     //if the connection fails to display an error message
 mongoose.connection.on('error', console.error.bind(console, 'DB Error: '));
     //if successful, the connection happens only once and prints confirmation to console
-mongoose.connection.once('open', function(callback) {
+mongoose.connection.once('openUri', function(callback) {
         console.log('Connected to mongodb');
     });
 

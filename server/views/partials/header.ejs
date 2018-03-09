@@ -35,92 +35,92 @@
     <body>
     <!-- Inverse the nav bar color and set it fixed to the top.
          Source: http://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav">
+            <!-- NAV LINKS -->
+                <!--Home-->
+                    <% if(title == "Home" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                    <a href="/"><i class="fas fa-home fa-2x"></i></a></li>
 
-                    <!--Home-->
-                        <% if(title == "Home" ) { %>
+                    <li role="separator" class="divider"></li>
+
+                <!--About Me-->
+                    <% if(title == "AboutMe" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                        <a href="/aboutMe">About Me</a></li>
+
+                    <li role="separator" class="divider"></li>
+
+                <!--Services-->
+                    <% if(title == "Services" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                            <a href="/services">Services</a></li>
+
+                    <li role="separator" class="divider"></li>
+
+                <!--Projects-->
+                    <% if(title == "Projects" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                        <a href="/projects">Projects</a></li>
+
+                    <li role="separator" class="divider"></li>
+
+                <!--Contact Me-->
+                    <% if(title == "Contact Me" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                        <a href="/contacts">Contact Me</a></li>
+
+                    <li role="separator" class="divider"></li>
+
+                <!--Users with Display Name-->
+                    <% if(displayName) { %>
+                        <% if(title == "Users" ) { %>
+                            <li class="active">
+                        <% } else { %>
+                            <li>
+                    <% } %>
+                        <a href="/users">Users</a></li>
+                    <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
+
+                <!--Logout-->
+                        <li><a href="/logout">Logout</a></li>
+                    <% } else { %>
+
+                <!--Register-->
+                        <% if(title == "Register" ) { %>
                             <li class="active">
                         <% } else { %>
                             <li>
                         <% } %>
-                        <a href="/"><i class="fas fa-home fa-2x"></i></a></li>
+                            <a href="/register">Register</a></li>
 
-                        <li role="separator" class="divider"></li>
-
-                    <!--About Me-->
-                        <% if(title == "AboutMe" ) { %>
+                <!--Login-->
+                        <% if(title == "Login" ) { %>
                             <li class="active">
                         <% } else { %>
                             <li>
                         <% } %>
-                            <a href="/aboutMe">About Me</a></li>
-
-                        <li role="separator" class="divider"></li>
-
-                    <!--Services-->
-                        <% if(title == "Services" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                                <a href="/services">Services</a></li>
-
-                        <li role="separator" class="divider"></li>
-
-                    <!--Projects-->
-                        <% if(title == "Projects" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                            <a href="/projects">Projects</a></li>
-
-                        <li role="separator" class="divider"></li>
-
-                    <!--Contact Me-->
-                        <% if(title == "Contact Me" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                            <a href="/contacts">Contact Me</a></li>
-
-                        <li role="separator" class="divider"></li>
-
-                    <!--Users with Display Name-->
-                        <% if(displayName) { %>
-                            <% if(title == "Users" ) { %>
-                                <li class="active">
-                            <% } else { %>
-                                <li>
-                        <% } %>
-                            <a href="/users">Users</a></li>
-                        <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
-
-                    <!--Logout-->
-                            <li><a href="/logout">Logout</a></li>
-                        <% } else { %>
-
-                    <!--Register-->
-                            <% if(title == "Register" ) { %>
-                                <li class="active">
-                            <% } else { %>
-                                <li>
-                            <% } %>
-                                <a href="/register">Register</a></li>
-
-                    <!--Login-->
-                            <% if(title == "Login" ) { %>
-                                <li class="active">
-                            <% } else { %>
-                                <li>
-                            <% } %>
-                                <a href="/login">Login</a></li>
-                        <% } %>
+                            <a href="/login">Login</a></li>
+                    <% } %>
                     </ul>
                 </div>
-            </div>
+            </div> //End of div container-fluid
         </nav>
