@@ -26,6 +26,7 @@
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <!--Font Awesome -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script defer src="/static/fontawesome/fa-v4-shims.js"></script>
 
         <!-- Latest compiled and minified   JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -45,7 +46,7 @@
                         <% } else { %>
                             <li>
                         <% } %>
-                        <a href="/"><i class="fas fa-home"></i></a></li>
+                        <a href="/"><i class="fas fa-home fa-2x"></i></a></li>
 
                         <li role="separator" class="divider"></li>
 
@@ -97,7 +98,7 @@
                                 <li>
                         <% } %>
                             <a href="/users">Users</a></li>
-                        <li class="navbar-text">Hello, <%= displayName %></li>
+                        <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
 
                     <!--Logout-->
                             <li><a href="/logout">Logout</a></li>
