@@ -3,22 +3,13 @@ html {
     background-color: transparent;
 }
 
-body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: transparent;
-}
-
-main {
-    background-color: #698EFF; /* Light Blue*/
-}
-
 .navbar {
     margin-bottom: 0;
     border: 0 !important;
-    font-size: 12px !important;
+    font-size: 15px !important;
     text-align: center !important;
-    letter-spacing: 10px !important;
     border-radius: 0;
+    float: left;
 }
 /*Use the !important keyword to override any of bootstraps style for the nav bar,
 on hover, and on selection*/
@@ -31,6 +22,15 @@ on hover, and on selection*/
     border-color: transparent;
     color: #fff !important;
 }
+main {
+    background-color: #698EFF; /* Light Blue*/
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: transparent;
+}
+
 .container {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -40,6 +40,8 @@ on hover, and on selection*/
 .container-fluid {
     text-align: center !important;
 }
+
+
 .row {
     justify-content: center;
 }

@@ -6,45 +6,42 @@
 <!--To let the page fill the whole screen, use .container-fluid:
  Source: http://www.w3schools.com/bootstrap/bootstrap_case_container.asp-->
 
-<main class="container-fluid">
+<main class="container">
     <div class="container-fluid">
         <div class="page-header">
             <h1><%= title %></h1>
         </div>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-xs-12 col-sm-6 col-md-8">
                 <p>Welcome! This is a demo site made for Advanced Web Programming<br>
                     The purpose is to demonstrate basic use of:</p>
             </div>
-
-        <!-- Logos -->
-            <!--Twitter Bootstrap -->
-            <div class="col-md-2">
-                <h4 id="img-title">Twitter Bootstrap</h4>
-                <img class="image-responsive"
-                     src="images/bootstrap_html_css.png"
-                     title="Twitter Bootstrap, HTML5, CSS3"
-                     width="300" length="300"/>
-            </div>
-        </div>
-        <div class="row">
             <!--Node.js-->
-            <div class="col-md-2">
-                <h4 id="img-title">Node.js</h4>
+            <div class="col-xs-6 col-md-4">
                 <img class="image-responsive"
                      src="images/nodejs-logo.png"
                      title="Node.js"
                      width="150" length="150"/>
             </div>
+        </div>
+        <div class="row">
+        <!-- Logos -->
+            <!--Twitter Bootstrap -->
+            <div class="col-xs-6 col-md-4">
+                <img class="image-responsive"
+                     src="images/bootstrap_html_css.png"
+                     title="Twitter Bootstrap, HTML5, CSS3"
+                     width="300" length="300"/>
+            </div>
             <!--MongoDB-->
-            <div class="col-md-1">
-                <h4 id="img-title">MongoDB</h4>
+            <div class="col-xs-6 col-md-4">
                 <img class="image-responsive"
                      src="images/mongodb-logo.png"
                      title="MongoDB"
                      width="300" length="300"/>
             </div>
-
+            
+            
         </div>
     </div>
 
