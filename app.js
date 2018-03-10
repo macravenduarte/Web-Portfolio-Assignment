@@ -25,7 +25,7 @@ mongoose.connection.once('open', function(callback) {
 var routes = require('./server/routes/index');
 //other pages
 var aboutMe = require('./server/routes/aboutMe');
-var contacts = require('./server/routes/contacts');
+var contact = require('./server/routes/contact');
 var projects = require('./server/routes/projects');
 var services = require('./server/routes/services');
 var users = require('./server/routes/users');
@@ -59,7 +59,7 @@ app.use(passport.session());
 //USE the pages you've created
 app.use('/', routes);
 app.use('/aboutMe', aboutMe);
-app.use('/contacts', contacts);
+app.use('/contact', contact);
 app.use('/projects', projects);
 app.use('/services', services);
 app.use('/users', users);
