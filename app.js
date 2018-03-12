@@ -22,13 +22,12 @@ mongoose.connection.once('open', function(callback) {
     });
 
 //require CONTROLLERS
-var routes = require('./server/routes/index');
-//other pages
-var aboutMe = require('./server/routes/aboutMe');
-var contact = require('./server/routes/contact');
-var projects = require('./server/routes/projects');
-var services = require('./server/routes/services');
-var users = require('./server/routes/users');
+var routes = require('./server/routes/index'); // home
+var aboutMe = require('./server/routes/aboutMe'); // about me
+var contact = require('./server/routes/contact'); // contact
+var projects = require('./server/routes/projects'); //projects
+var services = require('./server/routes/services'); // services
+var users = require('./server/routes/users'); // users
 
 var app = express();
 
