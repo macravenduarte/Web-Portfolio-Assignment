@@ -3,51 +3,41 @@ html {
     background-color: transparent;
 }
 
-.navbar {
-    margin-bottom: 0;
-    border: 0 !important;
-    font-size: 15px !important;
-    text-align: center !important;
-    border-radius: 0;
-    float: left;
-}
-/*Use the !important keyword to override any of bootstraps style for the nav bar,
-on hover, and on selection*/
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #698EFF !important;
-    background-color: #fff !important;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
 main {
-    background-color: #698EFF; /* Light Blue*/
+    background-color: #2159FF; /* Light Blue*/
 }
 
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: transparent;
+    background-color: #002DB2;
+    margin: 15px !important;
+}
+
+.navbar {
+    font-size: 15px ;
+    text-align: center;
+}
+/*Use the !important keyword to override any of bootstraps style for the nav bar,
+on hover, and on selection*/
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #2159FF !important;
+    background-color: #B28100 !important;
+}
+
+.navbar-default .navbar-toggle {
+    color: #FFB800 !important;
+    border-color: transparent;
 }
 
 .container {
     padding-top: 15px;
     padding-bottom: 15px;
-    text-align: center !important;
 }
 
 .container-fluid {
     text-align: center !important;
 }
 
-
 .row {
     justify-content: center;
-}
-/*to adjust the glyph size, treat it as a font.
-Source: http://www.w3schools.com/bootstrap/bootstrap_glyphicons.asp*/
-.logo {
-    font-size: 100px;
-    color: white;
 }

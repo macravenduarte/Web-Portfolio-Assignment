@@ -10,49 +10,55 @@
     <head>
         <title><%= title %></title>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Stylesheet-->
         <link rel='stylesheet'
               href='/stylesheets/style.css' />
+        
         <!--Add your favicon to the page head -->
         <link rel='icon'
               href='/images/favicon.ico' />
+        
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet"
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <!-- Optional theme -->
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-        <!-- Latest   jQuery -->
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <!-- Latest jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        
+        <!-- Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
         <!--Font Awesome -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-        <script defer src="/static/fontawesome/fa-v4-shims.js"></script>
-
-        <!-- Latest compiled and minified   JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
     </head>
 
     <body>
-    <!-- Inverse the nav bar color and set it fixed to the top.
-         Source: http://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
-        <div class="container-fluid">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-            <!-- NAV LINKS -->
-                <!--Home-->
-                    <% if(title == "Home" ) { %>
-                        <li class="active">
-                    <% } else { %>
-                        <li>
-                    <% } %>
-                    <a href="/"><i class="fas fa-home fa-2x"></i></a></li>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <ul class="navbar-nav">
+                    <!--Home-->
+                        <% if(title == "Home" ) { %>
+                            <li class="active">
+                        <% } else { %>
+                            <li>
+                        <% } %>
+                        <a href="/" class="navbar-brand"><i class="fas fa-home fa-2x"></i></a></li>
+                    </ul>
+                </div>
 
-                    <li role="separator" class="divider"></li>
-
+                <ul class="nav navbar-nav">
                 <!--About Me-->
                     <% if(title == "AboutMe" ) { %>
                         <li class="active">
@@ -60,8 +66,6 @@
                         <li>
                     <% } %>
                         <a href="/aboutMe">About Me</a></li>
-
-                    <li role="separator" class="divider"></li>
 
                 <!--Services-->
                     <% if(title == "Services" ) { %>
@@ -71,8 +75,6 @@
                     <% } %>
                             <a href="/services">Services</a></li>
 
-                    <li role="separator" class="divider"></li>
-
                 <!--Projects-->
                     <% if(title == "Projects" ) { %>
                         <li class="active">
@@ -81,8 +83,6 @@
                     <% } %>
                         <a href="/projects">Projects</a></li>
 
-                    <li role="separator" class="divider"></li>
-
                 <!--Contact Me-->
                     <% if(title == "Contact Me" ) { %>
                         <li class="active">
@@ -90,41 +90,42 @@
                         <li>
                     <% } %>
                         <a href="/contact">Contact Me</a></li>
-
-                    <li role="separator" class="divider"></li>
-
-                <!--Users with Display Name-->
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                <!--Check if Users logged in-->
                     <% if(displayName) { %>
                         <% if(title == "Users" ) { %>
                             <li class="active">
                         <% } else { %>
                             <li>
-                    <% } %>
-                        <a href="/users">Users</a></li>
-                    <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
+                        <% } %>
+                            <a href="/users">Users</a></li>
+                        <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
 
-                <!--Logout-->
+                    <!--Logout-->
                         <li><a href="/logout">Logout</a></li>
                     <% } else { %>
 
-                <!--Register-->
-                        <% if(title == "Register" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                            <a href="/register">Register</a></li>
-
                 <!--Login-->
-                        <% if(title == "Login" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                            <a href="/login">Login</a></li>
+                    <% if(title == "Login" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
                     <% } %>
+                        <a href="/login">Login</a></li>
+                    <% } %>
+                    
+                <!--Register-->
+                    <% if(title == "Register" ) { %>
+                        <li class="active">
+                    <% } else { %>
+                        <li>
+                    <% } %>
+                        <a href="/register">Register</a></li>
+
                     </ul>
-                </div>
-            </div> //End of div container-fluid
+            </div>
         </nav>
-    <main class="container">
+    </div>
+<main>

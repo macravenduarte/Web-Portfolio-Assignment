@@ -1,5 +1,5 @@
 {
-  "name": "assignment1",
+  "name": "web-portfolio",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,12 +17,12 @@
     "express-session": "^1.12.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "mongoose": "^4.10.8",
+    "mongoose": "^4.13.11",
     "morgan": "~1.6.1",
     "normalize.css": "^8.0.0",
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
-    "popper.js": "^1.12.9",
+    "popper.js": "^1.14.0",
     "serve-favicon": "~2.3.0"
   }
 }

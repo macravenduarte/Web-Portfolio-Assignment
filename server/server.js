@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('COMP2068-Week8:server');
+var debug = require('debug');
 var http = require('http');
 
 /**
