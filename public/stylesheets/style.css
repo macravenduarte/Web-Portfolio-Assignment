@@ -21,7 +21,7 @@ on hover, and on selection*/
 
 .navbar-default .navbar-toggle {
     color: #FFB800 !important;
-    border-color: transparent;
+    border-color: transparent !important;
 }
 
 .container {
