@@ -42,91 +42,87 @@
     
     </head>
     <body>
-        <nav class="navbar navbar-light" style="background-color: #FFB800;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFB800;">     
+            <!-- Brand and Toggle grouped for better mobile display -->
+            <div class="navbar-header">
+                <ul class="navbar-nav">
+                <!--Home-->
+                    <% if(title == "Home" ) { %>
+                        <li class="nav-item active">
+                    <% } else { %>
+                        <li class="nav-item">
+                    <% } %>
+                    <a href="/" class="navbar-brand"><i class="fas fa-home fa-2x"></i></a></li>
+                </ul>                    
+            </div> <!-- End of navbar-header-->
             
-            <div class="container-fluid">
-                <!-- Brand and Toggle grouped for better mobile display -->
-                <div class="navbar-header">
-                    <ul class="navbar-nav">
-                    <!--Home-->
-                        <% if(title == "Home" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                        <a href="/" class="navbar-brand"><i class="fas fa-home fa-2x"></i></a></li>
-                    </ul>
-                    
-                </div> <!-- End of navbar-header-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
                 <!--About Me-->
                     <% if(title == "AboutMe" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                        <a href="/aboutMe">About Me</a></li>
+                        <a class="nav-link" href="/aboutMe">About Me</a></li>
         
                 <!--Services-->
                     <% if(title == "Services" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                            <a href="/services">Services</a></li>
+                        <a class="nav-link" href="/services">Services</a></li>
 
                 <!--Projects-->
                     <% if(title == "Projects" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                        <a href="/projects">Projects</a></li>
+                        <a class="nav-link" href="/projects">Projects</a></li>
 
                 <!--Contact Me-->
                     <% if(title == "Contact Me" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                        <a href="/contact">Contact Me</a></li>
+                        <a class="nav-link" href="/contact">Contact Me</a></li>
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
                 <!--Check if Users logged in-->
                 <% if(displayName) { %>
                     <% if(title == "Users" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
                         <span class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></span></li>
-
                 <!--Logout-->
-                    <li><a href="/logout">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
                 <% } else { %>
-
-                    <!--Login-->
+                
+                <!--Login-->
                     <% if(title == "Login" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                        <a href="/login">Login</a></li>
-                        <!--Register-->
+                        <a class="nav-link" href="/login">Login</a></li>
+                <!--Register-->
                     <% if(title == "Register" ) { %>
-                        <li class="active">
+                        <li class="nav-item active">
                     <% } else { %>
-                        <li>
+                        <li class="nav-item">
                     <% } %>
-                        <a href="/register">Register</a></li>
-                    <% } %>
-                    
-                    </ul>
-                </div>
+                        <a class="nav-link" href="/register">Register</a></li>
+                <% } %>
+                </ul>
             </div>
         </nav>
