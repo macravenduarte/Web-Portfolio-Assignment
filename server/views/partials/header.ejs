@@ -2,7 +2,7 @@
     File Name: Web Portfolio Assignment
     Author: Marco Duarte
     Website name: marco-duarte-web-portfolio.herokuapp.com
-    Descrption: This file will render the head and navigation header for the         site.
+    Descrption: This file will render the head and navigation header for the site.
 -->
 
 <!DOCTYPE html>
@@ -41,11 +41,11 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
     </head>
-
     <body>
-    <div class="container">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-light" style="background-color: #FFB800;">
+            
             <div class="container-fluid">
+                <!-- Brand and Toggle grouped for better mobile display -->
                 <div class="navbar-header">
                     <ul class="navbar-nav">
                     <!--Home-->
@@ -56,8 +56,12 @@
                         <% } %>
                         <a href="/" class="navbar-brand"><i class="fas fa-home fa-2x"></i></a></li>
                     </ul>
-                </div>
-
+                    
+                </div> <!-- End of navbar-header-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="nav navbar-nav">
                 <!--About Me-->
                     <% if(title == "AboutMe" ) { %>
@@ -66,7 +70,7 @@
                         <li>
                     <% } %>
                         <a href="/aboutMe">About Me</a></li>
-
+        
                 <!--Services-->
                     <% if(title == "Services" ) { %>
                         <li class="active">
@@ -94,37 +98,35 @@
                 
                 <ul class="nav navbar-nav navbar-right">
                 <!--Check if Users logged in-->
-                    <% if(displayName) { %>
-                        <% if(title == "Users" ) { %>
-                            <li class="active">
-                        <% } else { %>
-                            <li>
-                        <% } %>
-                            <a href="/users">Users</a></li>
-                        <li class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></li>
-
-                    <!--Logout-->
-                        <li><a href="/logout">Logout</a></li>
+                <% if(displayName) { %>
+                    <% if(title == "Users" ) { %>
+                        <li class="active">
                     <% } else { %>
+                        <li>
+                    <% } %>
+                        <span class="navbar-text"><i class="fas fa-user fa-2x"></i> <%= displayName %></span></li>
 
-                <!--Login-->
+                <!--Logout-->
+                    <li><a href="/logout">Logout</a></li>
+                <% } else { %>
+
+                    <!--Login-->
                     <% if(title == "Login" ) { %>
                         <li class="active">
                     <% } else { %>
                         <li>
                     <% } %>
                         <a href="/login">Login</a></li>
-                    <% } %>
-                    
-                <!--Register-->
+                        <!--Register-->
                     <% if(title == "Register" ) { %>
                         <li class="active">
                     <% } else { %>
                         <li>
                     <% } %>
                         <a href="/register">Register</a></li>
-
+                    <% } %>
+                    
                     </ul>
+                </div>
             </div>
         </nav>
-    </div>

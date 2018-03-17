@@ -7,6 +7,9 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+footer {
+    background-color: #FFB800;
+}
 .navbar {
     font-size: 15px ;
     text-align: center;
@@ -40,3 +43,5 @@ on hover, and on selection*/
 .panel-heading {
     text-align: center;
 }
+
+/* navbar-brand adjustment in the <nav> list */
