@@ -9,6 +9,9 @@ body {
 
 footer {
     background-color: #FFB800;
+    padding: .5rem 1rem;
+    display: flex;
+
 }
 
 nav.navbar {
@@ -45,16 +48,19 @@ on hover, and on selection*/
 }
 
 .nav-container {
-    padding: 1.5em;
+    padding: 1em 1em 0em 1em;
 }
 
+.footer-container {
+    padding: 0.5em 1em 1em 1em;
+}
 .container {
-    padding-top: 15px;
-    padding-bottom: 15px;     
+    padding: 1rem;    
 }
 
 .container-fluid {
     text-align: center !important;
+    padding: 0em 1em 0em 1em;
 }
 
 .row {
@@ -63,4 +69,7 @@ on hover, and on selection*/
 
 .panel-heading {
     text-align: center;
+}
+.panel-body {
+    background-color: #FFB800;
 }

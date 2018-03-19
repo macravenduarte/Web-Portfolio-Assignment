@@ -13,7 +13,7 @@ var User = require('../models/user');
 router.get('/', function(req, res, next) {
     //render the main index page with a title
     res.render('index', { 
-        title: 'Web Portfolio',
+        title: 'Getting MEAN',
         displayName: req.user ? req.user.displayName : ''
     });
 });
