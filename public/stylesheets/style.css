@@ -10,16 +10,33 @@ body {
 footer {
     background-color: #FFB800;
 }
+
+nav.navbar {
+    background-color: #FFB800 !important;
+}
 .navbar {
     font-size: 15px ;
     text-align: center;
 }
+/* change navbar-brand color */
+.navbar a.navbar-brand {
+    color: #2159FF;
+  }
+/* change navbar-toggler inside lines color (stroke) */
+.navbar-light span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#2159FF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: #2159FF;
+  }
 
+  /* change hamburger button border color */
+button.navbar-toggler.navbar-toggler-right {
+    border-color: #2159FF;
+  }
 /*Use the !important keyword to override any of bootstraps style for the nav bar,
 on hover, and on selection*/
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #2159FF !important;
-    background-color: #B28100 !important;
+    color: #B28100 !important;
+    background-color: #2159FF !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -27,9 +44,13 @@ on hover, and on selection*/
     border-color: transparent !important;
 }
 
+.nav-container {
+    padding: 1.5em;
+}
+
 .container {
     padding-top: 15px;
-    padding-bottom: 15px;  
+    padding-bottom: 15px;     
 }
 
 .container-fluid {
@@ -37,11 +58,9 @@ on hover, and on selection*/
 }
 
 .row {
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .panel-heading {
     text-align: center;
 }
-
-/* navbar-brand adjustment in the <nav> list */
