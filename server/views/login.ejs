@@ -1,28 +1,33 @@
 <% include partials/header.ejs %>
 
     <div class="container">
-        <% if (messages.length > 0) { %>
-            <div class="alert alert-danger"><%= messages %></div>
-        <% } %>
-        <h1>Please Login</h1>
-        <div class="form-group">
-            <form method="post">
-                <fieldset class="form-group text-left">
-                    <label>Username:</label>
-                    <input type="text" class="form-control" name="username" required autofocus/>
-                </fieldset>
-                <fieldset class="form-group text-left">
-                    <label>Password:</label>
-                    <input type="password" class="form-control" name="password" required/>
-                </fieldset>
-                <fieldset class="form-group text-right">    
-                    <a href="/register">Register</a>
-                </fieldset>
-                <fieldset class="form-group text-right">
-                    <input type="submit" class="btn btn-success" value="Log In"/>
-                </fieldset>
-            </form>
-        </div>
+    <!-- Warning alert pop up -->
+    <% if (messages.length > 0) { %>
+        <div class="alert alert-danger"><%= messages %></div>
+    <% } %>
+
+        <div class="container-fluid">
+            <h1>Login</h1>
+            <div class="form-group">
+                <form method="post">
+                    <fieldset class="form-group text-left">
+                        <label>Username:</label>
+                        <input type="text" class="form-control" name="username" required autofocus/>
+                    </fieldset>
+                    <fieldset class="form-group text-left">
+                        <label>Password:</label>
+                        <input type="password" class="form-control" name="password" required/>
+                    </fieldset>
+                    <fieldset class="form-group text-right">    
+                        <a href="/register">Register</a>
+                    </fieldset>
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Log In"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div> <!-- End of container-fluid -->
+
     </div>
 
 <% include partials/footer.ejs %>
