@@ -11,20 +11,23 @@ footer {
     background-color: #FFB800;
     padding: .5rem 1rem;
     display: flex;
-
+    text-align: right;
 }
 
+/* Navigation Styling */
 nav.navbar {
     background-color: #FFB800 !important;
 }
+/* change text size */
 .navbar {
     font-size: 15px ;
-    text-align: center;
 }
+
 /* change navbar-brand color */
 .navbar a.navbar-brand {
-    color: #2159FF;
+    color: #0040FF;
   }
+
 /* change navbar-toggler inside lines color (stroke) */
 .navbar-light span.navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#2159FF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -38,38 +41,43 @@ button.navbar-toggler.navbar-toggler-right {
 /*Use the !important keyword to override any of bootstraps style for the nav bar,
 on hover, and on selection*/
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #B28100 !important;
-    background-color: #2159FF !important;
-}
-
-.navbar-default .navbar-toggle {
-    color: #FFB800 !important;
-    border-color: transparent !important;
+    color: #2159FF !important;
+    background-color: transparent !important;
 }
 
 .nav-container {
-    padding: 1em 1em 0em 1em;
+    padding: 0.25rem 1rem 0.25rem 1rem;
 }
 
 .footer-container {
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.25rem 1rem 0.25rem 1rem;
 }
+
+.main-container {
+    margin: 0.25rem 1rem 0rem 1rem;
+}
+
 .container {
-    padding: 1rem;    
+    padding: 0.5rem 0rem;
+        
 }
 
 .container-fluid {
     text-align: center !important;
-    padding: 0em 1em 0em 1em;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .row {
     justify-content: space-around;
 }
 
-.panel-heading {
+
+.card-header {
     text-align: center;
 }
-.panel-body {
+
+.card-body {
     background-color: #FFB800;
 }
+
+/* Form Styling */
