@@ -1,26 +1,25 @@
-<!-- 
-    This page will render the CONTACT ME section from the contact folder of the web portfolio site.
-    It will include a navigation header and footer a form that will allow a user to send me an email.
-    For confirmation purposes there is also a captcha box to avoid spamming
--->
+<!-- This page will render the CONTACT ME section from the contact folder of the web portfolio site. It will include a navigation header and footer a form that will allow a user to send me an email. For confirmation purposes there is also a captcha box to avoid spamming -->
 
 <% include ../partials/header.ejs %>
 
-    <div class="container">
-        <!--page header div class via bootstrap -->
-        <div class="page-header">
-            <h1><%= title %></h1>
-        </div>
+    <div class="main-container rounded">
+        <div class="card rounded">
+            <div class="card-header rounded">
+                <div class="card-title">
+                    <h1><%= title %></h1>
+                </div>
+            </div>
+        </div>    
 
         <!--Link to my Github repo -->
-        <div class="container-fluid">
+        <div class="card-body rounded">
             <div class="row">
                 <div class="col-sm-2">
-                    <p>Check Out My GitHub Repo!</p>
+                    <p class="card-text">Check Out My GitHub Repo!</p>
                 </div>
                 <div class="col-sm-3">
                     <a href="http://github.com/macravenduarte/">
-                        <img src="images/Github/Octocat.png"
+                        <img class="image-responsive" src="images/Github/Octocat.png"
                              title="Link To Marco's Github Repository"
                              width="75" length="75"/>
                     </a>

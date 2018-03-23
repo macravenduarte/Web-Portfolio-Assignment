@@ -46,31 +46,29 @@ on hover, and on selection*/
 }
 
 .nav-container {
-    padding: 0.25rem 1rem 0.25rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .footer-container {
-    padding: 0.25rem 1rem 0.25rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .main-container {
-    margin: 0.25rem 1rem 0rem 1rem;
+    margin: 0rem 1rem 0rem 1rem;
 }
 
 .container {
-    padding: 0.5rem 0rem;
-        
+    padding: 0.5rem 0rem;       
 }
 
 .container-fluid {
     text-align: center !important;
-    padding: 0rem 1rem 0rem 1rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
 }
 
 .row {
     justify-content: space-around;
 }
-
 
 .card-header {
     text-align: center;
@@ -78,6 +76,7 @@ on hover, and on selection*/
 
 .card-body {
     background-color: #FFB800;
+    align-items: center;
 }
 
 /* Form Styling */
