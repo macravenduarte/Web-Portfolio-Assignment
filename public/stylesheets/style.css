@@ -45,16 +45,17 @@ on hover, and on selection*/
     background-color: transparent !important;
 }
 
+/* Containers*/
 .nav-container {
-    padding: 0rem 1rem 0rem 1rem;
+    padding: 0rem 0.5rem;
 }
 
 .footer-container {
-    padding: 0rem 1rem 0rem 1rem;
+    padding: 0rem 0.5rem;
 }
 
 .main-container {
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 0.5rem;
 }
 
 .container {
@@ -67,15 +68,26 @@ on hover, and on selection*/
 }
 
 .row {
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
+/* Card*/
 .card-header {
     text-align: center;
+    padding: 0.25rem 0.75rem !important;
 }
 
 .card-body {
     background-color: #FFB800;
+    align-items: center;
+}
+
+.card-text {
+    text-align: center !important;     
+}
+
+/* Images*/
+img .col-lg {
     align-items: center;
 }
 
